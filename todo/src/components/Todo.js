@@ -7,6 +7,9 @@ function Todo(){
     return(
         <div>
             <h1>TODO APP!</h1>
+            <ul>
+                <li> {todoState.item} </li>
+            </ul>
         </div>
     )
 }
