@@ -9,10 +9,19 @@ import TodoForm from './components/TodoForm';
 function App() {
   const [todoState, dispatch] = useReducer(reducer, initialState)
   console.log(todoState);
+
+  const addTodo = input => {
+    const newTodo = {
+      todo: input,
+      completed: false,
+      id: Date.now()
+    }
+    dispatch({type:'ADD_TODO', payload: newTodo})
+  }
   return (
     <div className="App">
       <TodoList  todoState = {todoState} />
-      <TodoForm />
+      <TodoForm addTodo = {addTodo} />
       
     </div>
   );
