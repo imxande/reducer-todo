@@ -3,6 +3,7 @@ import './App.css';
 
 import {reducer, initialState} from './reducers/todoReducer';
 import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <TodoList  todoState = {todoState} />
-      {/* <TodoForm /> */}
+      <TodoForm />
       
     </div>
   );
