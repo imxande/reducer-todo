@@ -1,11 +1,10 @@
-import React, {useReducer} from 'react';
-import TodoForm from './TodoForm';
+import React from 'react';
 
-
-function Todo(){
+function Todo(props){
     
     return(
         <div>
+            <h2>{props.item.todo}</h2>
            
         </div>
     )

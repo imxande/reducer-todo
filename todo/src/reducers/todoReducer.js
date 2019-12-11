@@ -8,7 +8,7 @@ export const reducer = (state, action) => {
                     {
                         item: action.text,
                         completed: false,
-                        key: Date.now()
+                        id: Date.now()
                       }
                 ]
             }
@@ -17,26 +17,25 @@ export const reducer = (state, action) => {
     }
 }
 
-export const initialState = 
-    [
+export const initialState = [
         {
             todo: 'Learn about reducers',
             completed: false,
-            key:1
+            id:1
         }, 
         {
             todo: 'Study about reducers',
             completed: false,
-            key:2
+            id:2
         },
         {
             todo: 'Eat dinner more reducers',
             completed: false,
-            key:3
+            id:3
         },
         {
             todo: 'Workout',
             completed: false,
-            key:4
+            id:4
         }
     ]  

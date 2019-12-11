@@ -1,10 +1,13 @@
 import React from 'react';
 import Todo from './Todo';
 
-function TodoList() {
+function TodoList(props) {
     return(
         <div>
-            Is this working?
+            {props.todoState.map(item =>{
+                return <Todo item = {item} key = {item.id} />
+            }) }
+            
         </div>
     )
 }
