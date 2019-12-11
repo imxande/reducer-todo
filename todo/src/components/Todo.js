@@ -7,7 +7,9 @@ function Todo(props){
     }
     return(
         <div>
-            <h2 onClick = {handleClick}>{props.item.todo}</h2>
+            <h2 className = {props.item.completed ? 'todoCompleted': 'notCompleted'}
+            onClick = {handleClick}>
+                {props.item.todo}</h2>
            
         </div>
     )

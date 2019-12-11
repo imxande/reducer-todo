@@ -8,7 +8,7 @@ import TodoForm from './components/TodoForm';
 
 function App() {
   const [todoState, dispatch] = useReducer(reducer, initialState)
-  console.log(todoState);
+  // console.log(todoState);
 
   const addTodo = input => {
     const newTodo = {
