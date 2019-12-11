@@ -17,12 +17,26 @@ export const reducer = (state, action) => {
     }
 }
 
-export const initialState = {
-    items: [
+export const initialState = 
+    [
         {
-            item: 'Learn about reducers',
+            todo: 'Learn about reducers',
             completed: false,
-            key: Date.now()
-          }
-    ]
-}
+            key:1
+        }, 
+        {
+            todo: 'Study about reducers',
+            completed: false,
+            key:2
+        },
+        {
+            todo: 'Eat dinner more reducers',
+            completed: false,
+            key:3
+        },
+        {
+            todo: 'Workout',
+            completed: false,
+            key:4
+        }
+    ]  

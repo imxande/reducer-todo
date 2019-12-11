@@ -6,13 +6,13 @@ function TodoForm(props) {
     
     const handleChanges = e => {
        e.preventDefault();
-       setInput(e.target.value)
+      setInput(e.target.value)
     }
 
     const handleSubmit = e => {
         e.preventDefault();
         props.addTodo(input);
-        setInput('');
+        // setInput('');
     }
 
     return(
@@ -29,7 +29,7 @@ function TodoForm(props) {
                     onChange = {handleChanges}
                 />
             </form>
-            <button > Add Todo</button>
+            <button type = 'submit' > Add Todo</button>
             <button > Remove Todo</button>
             
         </div>
