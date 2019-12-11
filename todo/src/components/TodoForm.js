@@ -29,7 +29,9 @@ function TodoForm(props) {
                     onChange = {handleChanges}
                 />
             </form>
-            <button onClick = {() => props.addTodo()}> Add Todo</button>
+            <button > Add Todo</button>
+            <button > Remove Todo</button>
+            
         </div>
     )
 }

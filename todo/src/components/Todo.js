@@ -4,22 +4,16 @@ import {reducer, initialState} from '../reducers/todoReducer';
 
 function Todo(){
    const [todoState, dispatch] = useReducer(reducer, initialState)
-    // console.log(todoState);
-   const addTodo = (newTodoText) => {
-    const newTodo = {
-        item: newTodoText,
-        id: Date.now(),
-        completed: false
-  } 
-  // set state to newTodo remember to spread 
-  dispatch({ type: 'ADD_A_TODO'})
+ 
+ const addTodo = item => dispatch({ type: 'ADD_TODO', text: item });
 
-}
     return(
         <div>
             <h1>TODO APP!</h1>
             <ul>
-                <li> {todoState.item} </li>
+                {todoState.items.map(todo => (
+                    todo.item
+                ))}
             </ul>
             <TodoForm addTodo = {addTodo} />
         </div>
