@@ -18,9 +18,14 @@ function App() {
     }
     dispatch({type:'ADD_TODO', payload: newTodo})
   }
+
+  const toggle = id => {
+    dispatch({type: 'COMPLETED_TODO', payload: id})
+  }
+
   return (
     <div className="App">
-      <TodoList  todoState = {todoState} />
+      <TodoList  todoState = {todoState} toggle = {toggle} />
       <TodoForm addTodo = {addTodo} />
       
     </div>
