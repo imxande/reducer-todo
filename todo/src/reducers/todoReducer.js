@@ -1,5 +1,7 @@
 export const reducer = (state, action) => {
+    console.log(state, action)
     switch(action.type){
+        case 'ADD_A_TODO':
         default:
             return state;
     }
