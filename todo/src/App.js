@@ -23,10 +23,14 @@ function App() {
     dispatch({type: 'COMPLETED_TODO', payload: id})
   }
 
+  const remove = () => {
+    dispatch({type: 'CLEAR_COMPLETED_TODO'})
+  }
+
   return (
     <div className="App">
       <TodoList  todoState = {todoState} toggle = {toggle} />
-      <TodoForm addTodo = {addTodo} />
+      <TodoForm addTodo = {addTodo} remove = {remove} />
       
     </div>
   );

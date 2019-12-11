@@ -14,6 +14,11 @@ export const reducer = (state, action) => {
                 item
             })
 
+            case 'CLEAR_COMPLETED_TODO':
+                return state.filter((item) => {
+                    return !item.completed
+                })
+
         default:
             return state;
     }

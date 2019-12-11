@@ -14,6 +14,11 @@ function TodoForm(props) {
         setInput('');
     }
 
+    const handleRemove = e => {
+        e.preventDefault();
+        props.remove();
+      }
+
     return(
         <div>
             <label htmlFor = 'input'>Add a todo to the list</label>
@@ -26,10 +31,11 @@ function TodoForm(props) {
                     type = 'text'
                     value= {input}
                     onChange = {handleChanges}
-                />
+                /><br/>
                 <button type= 'submit' > Add Todo</button>
             </form>
-            
+            {/* clear button */}
+            <button onClick= {handleRemove}>Remove Todo</button>
         </div>
     )
 }
