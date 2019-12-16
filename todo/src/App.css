@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+li{
+  list-style-type: none;
+}
+
+.todoCompleted{
+  text-decoration: line-through;
+  color: salmon;
+}
+
+.notCompleted{
+  color:aqua;
+}
+
+
